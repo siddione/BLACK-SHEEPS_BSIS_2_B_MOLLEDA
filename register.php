@@ -145,19 +145,27 @@
             <img src="oclocks.png" alt="Logo">
         </div>
         <form method="POST" action="reget.php">
-        <h2 class="text-center mb-3">Sign Up</h2>
-        
+            <h2 class="text-center mb-3">Sign Up</h2>
+            
             <div class="mb-3">
-                <label for="full_name" class="form-label">Full Name</label>
-                <input type="text" id="full_name" name="full_name" class="form-control" required>
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" id="first_name" name="first_name" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" class="form-control" required>
+                <label for="middle_name" class="form-label">Middle Name</label>
+                <input type="text" id="middle_name" name="middle_name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" id="last_name" name="last_name" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" name="username" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
@@ -170,6 +178,10 @@
             <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
                 <textarea id="address" name="address" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="zip_code" class="form-label">Zip Code</label>
+                <input type="text" id="zip_code" name="zip_code" class="form-control" required>
             </div>
             <div class="d-grid">
                 <button type="submit" class="btn btn-outline-dark">Register</button>
