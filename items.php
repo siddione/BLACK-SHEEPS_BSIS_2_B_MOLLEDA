@@ -40,6 +40,22 @@
         color: #fff;
     }
 
+    /* Search Button Styling */
+    .navbar .btn-search {
+        background-color: #000;
+        color: #fff;
+        border-radius: 25px;
+        border: 1px solid #000;
+        padding: 8px 20px;
+        margin-left: 10px;
+    }
+
+    .navbar .btn-search:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+
     /* Navbar Logo and brand name */
     .navbar img {
         height: 90px; /* Increased logo size */
@@ -148,11 +164,6 @@
     }
 
     /* Background image for navbar */
-    .navbar {
-        background-image: url('bg2png.png'); /* Replace with your image path */
-        background-size: cover;
-        background-position: center;
-    }
 
     /* Styling for the banner (New Arrivals) */
     .banner {
@@ -164,19 +175,29 @@
         margin-top: 50px;
         margin-bottom: 30px;
     }
-</style>
 
+    /* Adding itempagebg.jpg as background with shadow */
+    .container {
+        background-image: url('itempagebg.jpg');
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+        padding: 20px;
+    }
+</style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-content">
-            <a href="#">
+            <a href="homepage.php">
                 <img src="oclocks.png" alt="o'clocks Logo">
             </a>
             <span class="brand-name">o'clocks</span>
             <input class="search-bar form-control" type="text" placeholder="Search products...">
-            
+            <!-- Search Button -->
+            <button class="btn-search">Search</button>
+
             <!-- Profile Dropdown -->
             <div class="dropdown">
                 <a class="profile-icon dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -198,15 +219,16 @@
         <div class="product-container">
             <!-- Product 1 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod1.jpg" class="product-img" alt="Product 1">
-                <div class="product-name">Santos de Cartier Medium Watch - WSSA0061</div>
+                <img src="prod1.jpg" class="product-img" onclick="location.href='product1.php';" href="product1" alt="Product 1">
+                <div class="product-name">Santos de Cartier Medium Watch</div>
                 <div class="product-price">$456,774.95</div>
                 <button class="btn">Add to Cart</button>
             </div>
             
+            
             <!-- Product 2 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod2.jpg" class="product-img" alt="Product 2">
+                <img src="prod2.jpg" class="product-img"onclick="location.href='product2.php';" alt="Product 2">
                 <div class="product-name">Cartier Baignoire</div>
                 <div class="product-price">$368,366</div>
                 <button class="btn">Add to Cart</button>
@@ -214,7 +236,7 @@
 
             <!-- Product 3 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod3.jpg" class="product-img" alt="Product 3">
+                <img src="prod3.jpg" class="product-img" onclick="location.href='product3.php';" alt="Product 3">
                 <div class="product-name">Cartier Drive de Cartier</div>
                 <div class="product-price">$200,580</div>
                 <button class="btn">Add to Cart</button>
@@ -222,15 +244,15 @@
 
             <!-- Product 4 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod4.jpg" class="product-img" alt="Product 4">
-                <div class="product-name">Cartier Brown Delux Vintage</div>
+                <img src="prods4.jpg" class="product-img" onclick="location.href='product4.php';" alt="Product 4">
+                <div class="product-name">Cartier Silver Delux Vintage</div>
                 <div class="product-price">$20,550</div>
                 <button class="btn">Add to Cart</button>
             </div>
 
             <!-- Product 5 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod5.jpg" class="product-img" alt="Product 5">
+                <img src="prod5.jpg" class="product-img" onclick="location.href='product5.php';" alt="Product 5">
                 <div class="product-name">Casio Vintage</div>
                 <div class="product-price">$1,080</div>
                 <button class="btn">Add to Cart</button>
@@ -238,7 +260,7 @@
 
             <!-- Product 6 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod6.jpg" class="product-img" alt="Product 6">
+                <img src="prod6.jpg" class="product-img" onclick="location.href='product6.php';" alt="Product 6">
                 <div class="product-name">Rolex Day-Date 40</div>
                 <div class="product-price">$120,280</div>
                 <button class="btn">Add to Cart</button>
@@ -246,7 +268,7 @@
 
             <!-- Product 7 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod7.jpg" class="product-img" alt="Product 7">
+                <img src="prod7.jpg" class="product-img" onclick="location.href='product7.php';" alt="Product 7">
                 <div class="product-name">Rolex Milgauss </div>
                 <div class="product-price">$130,280</div>
                 <button class="btn">Add to Cart</button>
@@ -254,7 +276,7 @@
 
             <!-- Product 8 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod8.jpg" class="product-img" alt="Product 8">
+                <img src="prod8.jpg" class="product-img" onclick="location.href='product8.php';" alt="Product 8">
                 <div class="product-name">Rolex Lady-Datejust </div>
                 <div class="product-price">$220,350</div>
                 <button class="btn">Add to Cart</button>
@@ -262,7 +284,7 @@
 
             <!-- Product 9 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod9.jpg" class="product-img" alt="Product 9">
+                <img src="prod9.jpg" class="product-img" onclick="location.href='product9.php';" alt="Product 9">
                 <div class="product-name">Rolex Oyster Perpetual </div>
                 <div class="product-price">$210,350</div>
                 <button class="btn">Add to Cart</button>
@@ -270,7 +292,7 @@
 
             <!-- Product 10 -->
             <div class="product-card col-md-3 col-sm-6">
-                <img src="prod10.jpg" class="product-img" alt="Product 10">
+                <img src="prods10.jpg" class="product-img" onclick="location.href='product10.php';" alt="Product 10">
                 <div class="product-name">Cartier Ronde Louis Cartier</div>
                 <div class="product-price">$175,290</div>
                 <button class="btn">Add to Cart</button>
@@ -280,4 +302,4 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html>    

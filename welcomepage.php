@@ -1,4 +1,3 @@
-welcomepage.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,8 +176,8 @@ welcomepage.php
 
     <!-- Top buttons (Home, Log In / Sign In) -->
     <div class="top-buttons">
-        <button onclick="window.location.href='index.html'">Home</button>
-        <button onclick="window.location.href='register (2).php'">Log In / Sign Up</button>
+        <button onclick="window.location.href='homepage.php'">Home</button>
+        <button onclick="window.location.href='index.php'">Log In / Sign Up</button>
     </div>
 </header>
 

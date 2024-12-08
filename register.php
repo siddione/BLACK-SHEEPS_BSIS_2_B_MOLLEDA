@@ -183,10 +183,10 @@
                 <label for="zip_code" class="form-label">Zip Code</label>
                 <input type="text" id="zip_code" name="zip_code" class="form-control" required>
             </div>
+            
             <div class="d-grid">
-                <button type="submit" class="btn btn-outline-dark">Register</button>
+                <button type="submit" class="btn btn-outline-dark" href="homepage.php" >Register</button>
             </div>
-        
         </form>
         <p class="mt-3 text-center">Already have an account? <a href="index.php" class="text-decoration-none">Login</a></p>
     </div>

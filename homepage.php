@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - o'clocks</title>
+    <title>Homepage - o'clock</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -13,34 +13,77 @@
         }
 
         /* Navbar Styling */
-        .navbar {
-            padding: 10px 20px;
-            background-color: #fff;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
+          .navbar {
+        background-color: transparent;
+        padding: 10px 20px;
+    }
 
-        .navbar .brand-name {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-left: 10px;
-        }
+    .navbar .search-bar {
+        width: 50%;
+        padding: 8px;
+        border-radius: 25px;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    }
 
-        .navbar img {
-            height: 60px;
-        }
+    .navbar .btn-profile {
+        background-color: #fff;
+        color: #000;
+        border-radius: 25px;
+        border: 1px solid #000;
+        padding: 8px 20px;
+    }
 
-        .navbar .search-bar {
-            width: 50%;
-            border-radius: 25px;
-            border: 1px solid #ccc;
-            padding: 8px 12px;
-        }
+    .navbar .btn-profile:hover {
+        background-color: #000;
+        color: #fff;
+    }
 
-        .navbar .profile-icon {
-            font-size: 1.5rem;
-            color: #333;
-        }
+    /* Navbar Logo and brand name */
+    .navbar img {
+        height: 90px; /* Increased logo size */
+    }
 
+    .navbar .brand-name {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #000; /* Changed font color to black */
+        margin-left: 5px; /* Reduced margin to bring logo and text closer */
+        letter-spacing: 2px;
+        text-transform: lowercase;
+    }
+
+    .navbar .navbar-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Profile Icon */
+    .navbar .profile-icon {
+        font-size: 30px; /* Increased icon size */
+        color: #000;
+        margin-left: 20px;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-item {
+        color: #000;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f1f1f1;
+        color: #007bff;
+    }
         .carousel img {
             width: 100%;
             height: 500px;
@@ -75,6 +118,14 @@
             transition: all 0.3s ease;
         }
         
+         /* Background image for navbar */
+.navbar {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)); /* White gradient */
+    background-size: cover;
+    background-position: center;
+}
+
+        
         .carousel-item video {
     width: auto; /* Automatically adjusts based on height */
     height: 700px; /* Set the height for portrait orientation */
@@ -105,17 +156,31 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-            <img src="oclocks.png" alt="Logo">
-            <span class="brand-name">o'clocks</span>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#">
+                <img src="oclocks.png" alt="o'clocks Logo">
+            </a>
+            <span class="brand-name">o'clock</span>
+            <input class="search-bar form-control" type="text" placeholder="Search products...">
+            
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+                <a class="profile-icon dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i> <!-- Profile icon -->
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#" >My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">My Orders</a></li>
+                    <li><a class="dropdown-item" href="#">My Messages</a></li>
+                    <li><a class="dropdown-item" href="#">Switch Accounts</a></li>
+                    <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                    <li><a class="dropdown-item" href="aboutus.php" >About Us</a></li>
+                </ul>
+            </div>
         </div>
-        <input class="search-bar" type="text" placeholder="Search products...">
-        <a href="#" class="profile-icon">
-            <i class="fas fa-user-circle"></i>
-        </a>
     </nav>
-
+    
     <!-- Carousel -->
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner" style="position: relative; background-image: url('hp2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -126,7 +191,7 @@
                 Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-none d-md-block">
-                <h5>Santos de Cartier Medium Watch</h52
+                <h5>Santos de Cartier Medium Watch</h5>
                 <p>$456,774.95</p>
             </div>
         </div>
@@ -168,7 +233,7 @@
     <div class="container mt-5">
         <h2 class="text-center mb-4">Explore Our Collection</h2>
         <div class="product-images-container">
-            <div class="product-image" onclick="location.href='product1.php';">
+            <div class="product-image" onclick="location.href='product1.php';" href="product1">
                 <img src="prod1.jpg" alt="Product 1">
             </div>
             <div class="product-image" onclick="location.href='product2.php';">
@@ -176,12 +241,6 @@
             </div>
             <div class="product-image" onclick="location.href='product3.php';">
                 <img src="prod3.jpg" alt="Product 3">
-            </div>
-            <div class="product-image" onclick="location.href='product4.php';">
-                <img src="prod4.jpg" alt="Product 4">
-            </div>
-            <div class="product-image" onclick="location.href='product5.php';">
-                <img src="prod5.jpg" alt="Product 5">
             </div>
         </div>
     </div>

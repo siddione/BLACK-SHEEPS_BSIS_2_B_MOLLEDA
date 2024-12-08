@@ -137,7 +137,7 @@
                 <input type="password" id="password" placeholder="Enter your password" class="form-control" name="password" required>
             </div>
             <div class="d-grid">
-                <button type="submit" class="btn btn-outline-dark">Login</button>
+                <button type="submit" class="btn btn-outline-dark" href="homepage.php" >Login</button>
             </div>
             <div class="mt-3 text-center">
                 <p>Don't have an account? <a href="register.php" class="text-decoration-none">Create New</a></p>
@@ -147,4 +147,4 @@
 
     <script src="js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>   

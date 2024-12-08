@@ -1,5 +1,5 @@
 <?php
-require 'db.php'; // Include the database connection
+require 'db.php'; // Include the database connection file
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get user inputs from the login form
@@ -14,13 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user) {
-            // Compare the entered password with the stored plain-text password
-            if ($password === $user['password']) {
-                // Password matches, successful login
-                echo "Login successful!";
-                // Redirect to a new page or start the session
+            // Check if password matches
+            if ($password === $user['password']) { // Since you are storing plain text password
+                // Start the session and store user info
+                session_start();
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['username'] = $user['user_name'];
+
+                // Redirect to homepage
+                header("Location: homepage.php");
+                exit(); // Always call exit after redirect
             } else {
-                // Incorrect password
                 echo "Incorrect password.";
             }
         } else {
